@@ -1568,7 +1568,7 @@ export function AdminProjectDetail({
                           "",
                       );
                       // Check if location is being removed (latitude/longitude are undefined)
-                      if (location.latitude === undefined || location.longitude === undefined) {
+                      if (location.latitude == null || location.longitude == null) {
                         // Location removed - set to defaults but mark as not set
                         setEditLatitude(13.0827);
                         setEditLongitude(80.2707);

@@ -116,7 +116,7 @@ export function AboutUs() {
       opacity: 1, 
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 100
       }

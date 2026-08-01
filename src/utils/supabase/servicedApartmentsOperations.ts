@@ -8,8 +8,8 @@ export interface ServicedApartment {
   city: string;
   location: string;
   address?: string;
-  latitude?: number;
-  longitude?: number;
+  latitude?: number | null;
+  longitude?: number | null;
   sleeps: number;
   bedrooms: number;
   bathrooms: number;
@@ -114,6 +114,7 @@ export interface Booking {
   checkout_completed?: boolean;
   checkin_notes?: string;
   checkout_notes?: string;
+  kyc_required?: boolean;
   kyc_submitted?: boolean;
   kyc_verified?: boolean;
   kyc_documents?: string[];

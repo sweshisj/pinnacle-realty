@@ -36,8 +36,8 @@ interface LocationData {
   postalCode?: string;
   country?: string;
   countryCode?: string;
-  latitude?: number;
-  longitude?: number;
+  latitude?: number | null;
+  longitude?: number | null;
   formattedAddress?: string;
   osmId?: string;
   osmType?: string;
@@ -116,7 +116,7 @@ export function PropertyLocationPicker({
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
-  const searchTimeoutRef = useRef<NodeJS.Timeout>();
+  const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Auto-save when showMap is false and address fields change
   useEffect(() => {

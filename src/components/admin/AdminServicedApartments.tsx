@@ -1788,7 +1788,7 @@ export default function AdminServicedApartments({
                 onValueChange={(payment_status) =>
                   setNewBookingData((prev) => ({
                     ...prev,
-                    payment_status,
+                    payment_status: payment_status as typeof prev.payment_status,
                   }))
                 }
               >
@@ -1818,7 +1818,7 @@ export default function AdminServicedApartments({
                 onValueChange={(booking_status) =>
                   setNewBookingData((prev) => ({
                     ...prev,
-                    booking_status,
+                    booking_status: booking_status as typeof prev.booking_status,
                   }))
                 }
               >
