@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import {
@@ -259,7 +260,7 @@ export function Home({ navigateTo }: HomeProps) {
                     >
                       <img
                         src={slide}
-                        alt={`Pinnacle Realty Property ${index + 1}`}
+                        alt={`${brand.name} Property ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -422,7 +423,7 @@ export function Home({ navigateTo }: HomeProps) {
         </div>
       </section>
 
-      {/* About Pinnacle Realty Section */}
+      {/* About section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -435,7 +436,7 @@ export function Home({ navigateTo }: HomeProps) {
               <h2 className="text-4xl lg:text-5xl text-slate-900 mb-6">
                 Welcome to{" "}
                 <span className="text-green-600">
-                  Pinnacle Realty
+                  {brand.name}
                 </span>
               </h2>
               <div className="h-1 w-20 bg-green-600 mb-8"></div>
@@ -444,7 +445,7 @@ export function Home({ navigateTo }: HomeProps) {
                 <p className="text-lg">
                   At{" "}
                   <strong className="text-slate-900">
-                    Pinnacle Realty
+                    {brand.name}
                   </strong>
                   , we believe in the transformative power of
                   finding the perfect home. Whether you're a
@@ -463,7 +464,7 @@ export function Home({ navigateTo }: HomeProps) {
                 </p>
 
                 <p className="text-lg">
-                  We at Pinnacle Realty are the most trusted plots
+                  We at {brand.name} are the most trusted plots
                   and real estate developers, bringing you
                   projects and properties in your favorite
                   metro's most prime & potential addresses. When
@@ -582,7 +583,7 @@ export function Home({ navigateTo }: HomeProps) {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl mb-4">
-              Why Choose Pinnacle Realty
+              Why Choose {brand.name}
             </h2>
             <div className="h-1 w-20 bg-green-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -733,14 +734,14 @@ export function Home({ navigateTo }: HomeProps) {
                 property: "Harborview Residences, Sydney",
                 rating: 5,
                 review:
-                  "Pinnacle Realty made buying our Sydney apartment completely stress-free. Responsive, honest, and guided us through every step. Couldn't be happier.",
+                  `${brand.name} made buying our Sydney apartment completely stress-free. Responsive, honest, and guided us through every step. Couldn't be happier.`,
               },
               {
                 name: "Sophie Nguyen",
                 property: "Southbank Towers, Melbourne",
                 rating: 5,
                 review:
-                  "As an investor I've dealt with many agencies — Pinnacle Realty stands out for transparency and market knowledge. Excellent rental yield from day one.",
+                  `As an investor I've dealt with many agencies — ${brand.name} stands out for transparency and market knowledge. Excellent rental yield from day one.`,
               },
               {
                 name: "Emma Foster",

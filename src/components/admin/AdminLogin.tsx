@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { brand } from "../../config/brand";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -113,7 +114,7 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Pinnacle Realty Admin
+                {brand.name} Admin
               </motion.p>
             </div>
           </CardHeader>

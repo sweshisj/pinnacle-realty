@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -113,7 +114,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
       challenge:
         "Managing multiple vendors (contractor, builder, agent)",
       solution:
-        "One single point of contact — Pinnacle Realty Elite manages all stakeholders for you.",
+        `One single point of contact — ${brand.name} Elite manages all stakeholders for you.`,
     },
   ];
 
@@ -121,32 +122,32 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
     {
       name: "Mrs. Yamini Ramesh Babu",
       designation: "IT Professional, USA",
-      text: "Customer satisfaction was their top priority, and they maintained transparency and trustworthiness throughout. After approaching Pinnacle Realty, we felt confident in our decision.",
+      text: `Customer satisfaction was their top priority, and they maintained transparency and trustworthiness throughout. After approaching ${brand.name}, we felt confident in our decision.`,
     },
     {
       name: "Mr. Venkatesh Babu",
       designation: "IT Professional, USA",
-      text: "Pinnacle Realty communication was always clear, respectful, and professional. They keep us updated daily with the ongoing work, making the entire process seamless",
+      text: `${brand.name} communication was always clear, respectful, and professional. They keep us updated daily with the ongoing work, making the entire process seamless`,
     },
     {
       name: "Mr. Iyappan",
       designation: "Program Manager, USA",
-      text: "My experience with Pinnacle Realty and their team was exceptional. From selling my property to purchasing a new one, everything was handled seamlessly and professionally.",
+      text: `My experience with ${brand.name} and their team was exceptional. From selling my property to purchasing a new one, everything was handled seamlessly and professionally.`,
     },
     {
       name: "Cpt. Harish Venkatesh",
       designation: "Naval Officer, Singapore",
-      text: "After experiencing Pinnacle Realty's service, we decided to purchase a house through them. We had trust in Pinnacle Realty, which enabled us to buy our dream house with confidence.",
+      text: `After experiencing ${brand.name}'s service, we decided to purchase a house through them. We had trust in ${brand.name}, which enabled us to buy our dream house with confidence.`,
     },
     {
       name: "Mr. Zubair",
       designation: "Qatar",
-      text: "Outstanding service and support. Pinnacle Realty made my property investment journey smooth and worry-free.",
+      text: `Outstanding service and support. ${brand.name} made my property investment journey smooth and worry-free.`,
     },
     {
       name: "Mr. Aandigiri",
       designation: "Shop Square IT CEO, Canada",
-      text: "Professional, transparent, and trustworthy. Pinnacle Realty exceeded all my expectations in helping me invest in Australia.",
+      text: `Professional, transparent, and trustworthy. ${brand.name} exceeded all my expectations in helping me invest in Australia.`,
     },
   ];
 
@@ -182,7 +183,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
             Exclusive for NRI's
           </Badge>
           <h1 className="mb-8 text-white">
-            Pinnacle Realty Elite
+            {brand.name} Elite
           </h1>
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border-2 border-white/20 mb-8">
             <p className="text-lg md:text-xl leading-relaxed italic">
@@ -196,7 +197,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
               rebuilding my trust step by step. The day I
               finally stood before my own home, I knew it
               symbolized more than success — it was faith
-              rewarded. That moment inspired Pinnacle Realty
+              rewarded. That moment inspired {brand.name}
               Developers — born to bring trust, transparency,
               and clarity to real estate."
             </p>
@@ -216,7 +217,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
                 <p>
                   <strong>- A. Sharma</strong>
                   <br />
-                  Founder, Pinnacle Realty
+                  Founder, {brand.name}
                 </p>
               </div>
             </div>
@@ -227,7 +228,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
         </motion.div>
       </section>
 
-      {/* About Pinnacle Realty Elite */}
+      {/* About Elite section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -237,16 +238,16 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
             className="text-center mb-12"
           >
             <h2 className="mb-6 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-              Pinnacle Realty Elite
+              {brand.name} Elite
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Pinnacle Realty Elite is our dedicated arm for NRIs,
+              {brand.name} Elite is our dedicated arm for NRIs,
               simplifying property ownership across Australia.
               We combine on-ground expertise, legal assurance,
               and seamless digital access for worry-free
               investments. From identifying premium plots to
               managing and constructing properties, we handle
-              every detail transparently. At Pinnacle Realty Elite,
+              every detail transparently. At {brand.name} Elite,
               we don't just help you buy property — we help you
               build a legacy in your homeland, backed by trust,
               clarity, and care.
@@ -330,7 +331,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
             className="text-center mb-12"
           >
             <h2 className="mb-4">
-              NRI Challenges & Pinnacle Realty Elite Solutions
+              NRI Challenges & {brand.name} Elite Solutions
             </h2>
             <p className="text-xl text-gray-600">
               We understand your concerns and have solutions for
@@ -454,7 +455,7 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We understand the unique challenges NRIs face when
               investing from abroad — from Legal Complexities to
-              property maintenance. That's why Pinnacle Realty
+              property maintenance. That's why {brand.name}
               Elite provides one-stop Clarity, Comfort, and
               Confidence at every step.
             </p>
@@ -538,21 +539,21 @@ export function EliteNRI({ navigateTo }: EliteNRIProps) {
               <Phone className="h-6 w-6 flex-shrink-0" />
               <div>
                 <p className="text-sm opacity-80">Call Us</p>
-                <p>+61 4XX XXX XXX</p>
+                <p>{brand.contact.phone}</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="h-6 w-6 flex-shrink-0" />
               <div>
                 <p className="text-sm opacity-80">Email Us</p>
-                <p>nri@pinnaclerealty.com</p>
+                <p>{brand.contact.secondaryEmail}</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="h-6 w-6 flex-shrink-0" />
               <div>
                 <p className="text-sm opacity-80">Visit Us</p>
-                <p>Victoria, Australia</p>
+                <p>{brand.contact.location}</p>
               </div>
             </div>
           </div>

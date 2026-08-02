@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -110,7 +111,7 @@ export function SellerForm({ navigateTo }: SellerFormProps) {
         >
           <h1 className="mb-4">💼 Sell Your Property</h1>
           <p className="text-xl">
-            ✨ Get the best value for your property with Pinnacle Realty
+            ✨ Get the best value for your property with {brand.name}
           </p>
         </motion.div>
       </section>
@@ -367,7 +368,7 @@ export function SellerForm({ navigateTo }: SellerFormProps) {
         {/* Why Choose Us */}
         <div className="mt-12">
           <h2 className="text-3xl text-center mb-8">
-            Why Choose Pinnacle Realty?
+            Why Choose {brand.name}?
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card>

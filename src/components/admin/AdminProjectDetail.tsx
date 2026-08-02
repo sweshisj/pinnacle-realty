@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../../config/brand";
 import { Button } from "../ui/button";
 import {
   Card,
@@ -144,8 +145,8 @@ export function AdminProjectDetail({
   const [deleteDialogOpen, setDeleteDialogOpen] =
     useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [editLatitude, setEditLatitude] = useState(13.0827);
-  const [editLongitude, setEditLongitude] = useState(80.2707);
+  const [editLatitude, setEditLatitude] = useState(brand.map.lat);
+  const [editLongitude, setEditLongitude] = useState(brand.map.lng);
   const [editMapAddress, setEditMapAddress] = useState("");
   const [hasLocationSet, setHasLocationSet] = useState(false);
   const [showLocationMap, setShowLocationMap] = useState(true);
@@ -209,10 +210,10 @@ export function AdminProjectDetail({
         setEditLead(projectData.lead || "");
         setExistingImages(projectData.images || []);
         setEditLatitude(
-          projectData.coordinates?.lat || 13.0827,
+          projectData.coordinates?.lat || brand.map.lat,
         );
         setEditLongitude(
-          projectData.coordinates?.lng || 80.2707,
+          projectData.coordinates?.lng || brand.map.lng,
         );
         setEditMapAddress(projectData.mapAddress || "");
         // Initialize brochures from array or single URL (backward compatibility)
@@ -408,8 +409,8 @@ export function AdminProjectDetail({
       // Reset brochures from array or single URL (backward compatibility)
       const brochuresArray = project.brochures || (project.brochureUrl ? [project.brochureUrl] : []);
       setExistingBrochures(brochuresArray);
-      setEditLatitude(project.coordinates?.lat || 13.0827);
-      setEditLongitude(project.coordinates?.lng || 80.2707);
+      setEditLatitude(project.coordinates?.lat || brand.map.lat);
+      setEditLongitude(project.coordinates?.lng || brand.map.lng);
       setEditMapAddress(project.mapAddress || "");
       const hasCoords = Boolean(project.coordinates?.lat && project.coordinates?.lng);
       setHasLocationSet(hasCoords);
@@ -1570,8 +1571,8 @@ export function AdminProjectDetail({
                       // Check if location is being removed (latitude/longitude are undefined)
                       if (location.latitude == null || location.longitude == null) {
                         // Location removed - set to defaults but mark as not set
-                        setEditLatitude(13.0827);
-                        setEditLongitude(80.2707);
+                        setEditLatitude(brand.map.lat);
+                        setEditLongitude(brand.map.lng);
                         setHasLocationSet(false);
                       } else {
                         // Location set - update coordinates and mark as set

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -538,7 +539,7 @@ export function ProjectDetail({
                       Call us at
                     </div>
                     <div className="text-2xl text-green-600 mb-4">
-                      +61 400 123 456
+                      {brand.contact.phone}
                     </div>
                     <div className="text-sm text-gray-500">
                       Mon-Sat: 9 AM - 7 PM

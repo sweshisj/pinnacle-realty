@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { motion } from "framer-motion";
@@ -140,7 +141,7 @@ export function AboutUs() {
           >
             <img
               src={propertyBgImage}
-              alt="About Pinnacle Realty"
+              alt={`About ${brand.name}`}
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -154,7 +155,7 @@ export function AboutUs() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-5xl mb-4"
           >
-            About Pinnacle Realty
+            About {brand.name}
           </motion.h1>
           <motion.p 
             initial={{ y: 50, opacity: 0 }}
@@ -182,14 +183,14 @@ export function AboutUs() {
             transition={{ duration: 0.8 }}
             className="text-4xl mb-6 text-green-600"
           >
-            Welcome to Pinnacle Realty
+            Welcome to {brand.name}
           </motion.h2>
           <div className="max-w-4xl mx-auto space-y-4 text-gray-700">
             {[
-              "At Pinnacle Realty, we believe in the transformative power of finding the perfect home. Whether you're a first-time buyer, seasoned investor, or looking to sell your property, our team of dedicated professionals is here to guide you through every step of the real estate journey.",
+              `At ${brand.name}, we believe in the transformative power of finding the perfect home. Whether you're a first-time buyer, seasoned investor, or looking to sell your property, our team of dedicated professionals is here to guide you through every step of the real estate journey.`,
               "We understand the importance of investing your hard-earned money in the house & Land. When it comes to buying a property, always a customer dreams a lifestyle that is unconditional & unrestricted.",
-              "We at Pinnacle Realty are one of Australia's most trusted property developers, bringing you projects across Melbourne, Sydney, Brisbane, Perth and beyond — in the nation's prime and fastest-growing addresses. When you purchase a property from us, we promise to upgrade your next chapter in life. From beachside villas to inner-city apartments and suburban land releases — we do it all at your convenience.",
-              "Welcome to Pinnacle Realty, where construction meets promotion, and excellence is our standard. With a combined expertise in construction and site development, we are your one-stop solution for turning your vision into reality and promoting it to the world."
+              `We at ${brand.name} are one of Australia's most trusted property developers, bringing you projects across Melbourne, Sydney, Brisbane, Perth and beyond — in the nation's prime and fastest-growing addresses. When you purchase a property from us, we promise to upgrade your next chapter in life. From beachside villas to inner-city apartments and suburban land releases — we do it all at your convenience.`,
+              `Welcome to ${brand.name}, where construction meets promotion, and excellence is our standard. With a combined expertise in construction and site development, we are your one-stop solution for turning your vision into reality and promoting it to the world.`
             ].map((text, index) => (
               <motion.p
                 key={index}
@@ -227,7 +228,7 @@ export function AboutUs() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-center text-lg leading-relaxed max-w-4xl mx-auto"
           >
-            At Pinnacle Realty, our mission is clear: to construct outstanding properties and ensure they receive the recognition they deserve. We believe in building more than structures; we create opportunities, communities, and a brighter future for all. We are dedicated to delivering value that stands the test of time, both in the physical and digital realms. We are committed to creating a seamless and enjoyable experience for our clients, making the process of buying, selling, or investing in real estate a positive and rewarding venture.
+            At {brand.name}, our mission is clear: to construct outstanding properties and ensure they receive the recognition they deserve. We believe in building more than structures; we create opportunities, communities, and a brighter future for all. We are dedicated to delivering value that stands the test of time, both in the physical and digital realms. We are committed to creating a seamless and enjoyable experience for our clients, making the process of buying, selling, or investing in real estate a positive and rewarding venture.
           </motion.p>
         </motion.div>
 
@@ -305,9 +306,9 @@ export function AboutUs() {
           </motion.h3>
           <div className="max-w-3xl mx-auto mb-8">
             {[
-              "Pinnacle Realty, is one of the leading concern in Real Estate business creating opportunity of Investment and satisfactory service to our esteemed customers.",
+              `${brand.name}, is one of the leading concern in Real Estate business creating opportunity of Investment and satisfactory service to our esteemed customers.`,
               "We deliver residential apartments, houses, and land estates across Australia's major cities and growth corridors. Every project carries full council approval, clear title, and transparent legal documentation for complete buyer confidence.",
-              "All Pinnacle Realty apartments are delivered with premium finishes — stone benchtops, engineered timber flooring, quality appliances, and secure parking — move-in ready from day one."
+              `All ${brand.name} apartments are delivered with premium finishes — stone benchtops, engineered timber flooring, quality appliances, and secure parking — move-in ready from day one.`
             ].map((text, index) => (
               <motion.p
                 key={index}
@@ -373,14 +374,14 @@ export function AboutUs() {
             transition={{ delay: 0.2 }}
             className="text-xl text-center text-gray-600 mb-8"
           >
-            Why You Need to Choose Pinnacle Realty
+            Why You Need to Choose {brand.name}
           </motion.h3>
           <motion.p 
             variants={fadeInUp}
             transition={{ delay: 0.3 }}
             className="text-center text-gray-700 mb-8 max-w-3xl mx-auto"
           >
-            Though the rates are aligned with the market rate, you would get the below as a value addition while buying an apartment with Pinnacle Realty
+            Though the rates are aligned with the market rate, you would get the below as a value addition while buying an apartment with {brand.name}
           </motion.p>
           
           <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto">
@@ -428,7 +429,7 @@ export function AboutUs() {
             variants={bounceIn}
             className="text-3xl text-center mb-12"
           >
-            📊 Pinnacle Realty by the Numbers
+            📊 {brand.name} by the Numbers
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -555,7 +556,7 @@ export function AboutUs() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-center text-lg leading-relaxed max-w-4xl mx-auto"
           >
-            At Pinnacle Realty, our mission is clear: to construct outstanding properties and ensure they receive the recognition they deserve. We believe in building more than structures; we create opportunities, communities, and a brighter future for all. We are dedicated to delivering value that stands the test of time, both in the physical and digital realms. We are committed to creating a seamless and enjoyable experience for our clients, making the process of buying, selling, or investing in real estate a positive and rewarding venture.
+            At {brand.name}, our mission is clear: to construct outstanding properties and ensure they receive the recognition they deserve. We believe in building more than structures; we create opportunities, communities, and a brighter future for all. We are dedicated to delivering value that stands the test of time, both in the physical and digital realms. We are committed to creating a seamless and enjoyable experience for our clients, making the process of buying, selling, or investing in real estate a positive and rewarding venture.
           </motion.p>
         </motion.div>
 
@@ -589,7 +590,7 @@ export function AboutUs() {
                 title: "Phone",
                 content: (
                   <>
-                    +61 3 9XXX XXXX<br />
+                    {brand.contact.officePhone}<br />
                     Mon-Fri: 9 AM - 6 PM<br />
                     Saturday: 10 AM - 4 PM
                   </>
@@ -600,7 +601,7 @@ export function AboutUs() {
                 title: "Email",
                 content: (
                   <>
-                    info@pinnaclerealty.com<br />
+                    {brand.contact.email}<br />
                     <br />
                     We respond within 24 hours
                   </>

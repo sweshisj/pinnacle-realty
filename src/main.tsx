@@ -3,6 +3,10 @@
   import { BrowserRouter as Router } from "react-router-dom";
   import App from "./App.tsx";
   import "./index.css";
+  import { brand } from "./config/brand";
+
+  document.title = brand.name;
+  document.documentElement.style.setProperty("--brand-primary", brand.colors.primary);
 
   createRoot(document.getElementById("root")!).render(
     <Router>

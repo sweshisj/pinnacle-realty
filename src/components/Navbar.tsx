@@ -1,4 +1,5 @@
 import React from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Menu, X, Heart } from "lucide-react";
@@ -114,10 +115,10 @@ export function Navbar({
             }
           >
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-green-600 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-sm">PR</span>
+              <div className="w-8 h-8 bg-green-600 rounded-md flex items-center justify-center" style={{ backgroundColor: "var(--brand-primary)" }}>
+                <span className="text-white font-bold text-sm">{brand.initials}</span>
               </div>
-              <span className="font-bold text-lg text-gray-900">Pinnacle Realty</span>
+              <span className="font-bold text-lg text-gray-900">{brand.name}</span>
             </div>
           </div>
 

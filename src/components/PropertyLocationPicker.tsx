@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
+import { brand } from "../config/brand";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -169,8 +170,8 @@ export function PropertyLocationPicker({
 
     // Default to Melbourne, Australia
     const defaultCenter: [number, number] = [
-      location.latitude || -37.8136,
-      location.longitude || 144.9631,
+      location.latitude || brand.map.lat,
+      location.longitude || brand.map.lng,
     ];
 
     const map = L.map(mapRef.current, {
@@ -272,7 +273,7 @@ export function PropertyLocationPicker({
           `limit=5`,
         {
           headers: {
-            "User-Agent": "PinnacleRealty/1.0",
+            "User-Agent": brand.userAgent,
           },
         }
       );
@@ -341,7 +342,7 @@ export function PropertyLocationPicker({
           `addressdetails=1`,
         {
           headers: {
-            "User-Agent": "PinnacleRealty/1.0",
+            "User-Agent": brand.userAgent,
           },
         }
       );
@@ -476,7 +477,7 @@ export function PropertyLocationPicker({
     // Reset map to Melbourne, Australia default
     if (mapInstanceRef.current && markerRef.current) {
       const L = (window as any).L;
-      const defaultCenter: [number, number] = [-37.8136, 144.9631];
+      const defaultCenter: [number, number] = [brand.map.lat, brand.map.lng];
       mapInstanceRef.current.setView(defaultCenter, 12);
       markerRef.current.setLatLng(defaultCenter);
     }
@@ -499,7 +500,7 @@ export function PropertyLocationPicker({
     // Reset map to Melbourne, Australia default
     if (mapInstanceRef.current && markerRef.current) {
       const L = (window as any).L;
-      const defaultCenter: [number, number] = [-37.8136, 144.9631];
+      const defaultCenter: [number, number] = [brand.map.lat, brand.map.lng];
       mapInstanceRef.current.setView(defaultCenter, 12);
       markerRef.current.setLatLng(defaultCenter);
     }

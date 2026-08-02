@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { brand } from "../../config/brand";
 import { ArrowLeft, Save, Upload, X, Calendar as CalendarIcon, Plus, Trash2, Image, FileText } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -378,7 +379,7 @@ export default function AdminServicedApartmentEditor({ apartment, onBack, onSave
                     id="city"
                     value={formData.city}
                     onChange={(e) => setFormData(prev => ({ ...prev, city: e.target.value }))}
-                    placeholder="e.g., Melbourne"
+                    placeholder={`e.g., ${brand.cities[0]}`}
                   />
                 </div>
 

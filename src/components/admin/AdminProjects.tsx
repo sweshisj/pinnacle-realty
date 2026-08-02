@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../../config/brand";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Card, CardContent } from "../ui/card";
@@ -206,7 +207,7 @@ export function AdminProjects({
 
       // Generate file name with current date
       const date = new Date().toISOString().split("T")[0];
-      const fileName = `PinnacleRealty_Projects_${date}.xlsx`;
+      const fileName = `${brand.exportPrefix}_Projects_${date}.xlsx`;
 
       // Save file
       XLSX.writeFile(wb, fileName);

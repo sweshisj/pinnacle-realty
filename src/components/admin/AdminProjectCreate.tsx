@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { brand } from "../../config/brand";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -115,8 +116,8 @@ export function AdminProjectCreate({
   const [unapproved, setUnapproved] = useState(false);
 
   // Location map coordinates
-  const [latitude, setLatitude] = useState(-37.8136); // Default to Melbourne
-  const [longitude, setLongitude] = useState(144.9631);
+  const [latitude, setLatitude] = useState(brand.map.lat); // Default map position (see src/config/brand.ts)
+  const [longitude, setLongitude] = useState(brand.map.lng);
   const [mapAddress, setMapAddress] = useState("");
 
   // Load buyers from Supabase on mount
@@ -615,7 +616,7 @@ export function AdminProjectCreate({
                       id="city"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      placeholder="e.g., Melbourne"
+                      placeholder={`e.g., ${brand.cities[0]}`}
                       className="border-2 border-teal-200 focus:border-teal-400 transition-all hover:border-teal-300 shadow-sm"
                     />
                   </motion.div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "../config/brand";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Star, ChevronLeft, ChevronRight, Video as VideoIcon, User } from "lucide-react";
@@ -112,7 +113,7 @@ export function Testimonials() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h1 className="text-4xl text-center mb-4">Client Testimonials</h1>
             <p className="text-center text-gray-600 text-lg">
-              Hear from our satisfied customers about their experience with Pinnacle Realty
+              Hear from our satisfied customers about their experience with {brand.name}
             </p>
           </div>
         </div>
@@ -159,7 +160,7 @@ export function Testimonials() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-4xl text-center mb-4">Client Testimonials</h1>
           <p className="text-center text-gray-600 text-lg">
-            Hear from our satisfied customers about their experience with Pinnacle Realty
+            Hear from our satisfied customers about their experience with {brand.name}
           </p>
         </div>
       </div>

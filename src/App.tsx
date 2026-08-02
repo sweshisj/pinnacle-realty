@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { brand } from "./config/brand";
 import { useNavigate, useLocation, Routes, Route, Navigate } from "react-router-dom";
 import { Home } from "./components/Home";
 import { ResidentialProjects } from "./components/ResidentialProjects";
@@ -266,7 +267,7 @@ export default function App() {
   if (!dataInitialized) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
-        <LoadingSpinner message="🏡 Welcome to Pinnacle Realty! Setting up your experience..." color="green" theme="home" size="lg" />
+        <LoadingSpinner message={`🏡 Welcome to ${brand.name}! Setting up your experience...`} color="green" theme="home" size="lg" />
       </div>
     );
   }
